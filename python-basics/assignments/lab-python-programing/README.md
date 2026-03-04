@@ -37,7 +37,8 @@ The delivery fee is $2 for the first 5 miles, so I am assuming any amount less t
 
 ## Pseudocode
 
-<!-- This class holds the high level logic of the program -->
+**This class holds the high level logic of the program**
+```text
 class PizzaOrderTaker {
     run()
         order = PizzaOrderBuilder()
@@ -48,8 +49,10 @@ class PizzaOrderTaker {
         
         order.display()
 }
+```
 
-<!-- This is a data class to hold the raw data of a pizza order -->
+**This is a data class to hold the raw data of a pizza order**
+```text
 class PizzaOrder {
     size string // "Small" or "Large"
     numToppings integer
@@ -60,8 +63,10 @@ class PizzaOrder {
         order_str = "Your {size} pizza with {numToppings} topping(s) will travel {deliveryDist} mile(s) to be delivered to you for a total cost of {total_cost}".
         print order_str to user
 }
+```
 
-<!-- This class uses the builder pattern to construct a pizza order -->
+**This class uses the builder pattern to construct a pizza order**
+```text
 class PizzaOrderBuilder {
     order PizzaOrder
 
@@ -95,5 +100,7 @@ class PizzaOrderBuilder {
     build()
         return order
 }
+```
 
 ## Running
+Run the program with `python pizza_order_cost.py` and follow the prompts to test the program logic.
